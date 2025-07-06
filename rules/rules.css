@@ -49,6 +49,24 @@ h1 {
   margin-bottom: 6px;
 }
 
+.exceptions {
+  margin-top: 10px;
+}
+
+.exceptions-title {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.exception {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
 .word {
   font-size: 1.1em;
   font-weight: bold;
