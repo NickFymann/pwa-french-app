@@ -1,6 +1,6 @@
 {
-  "name": "Французский язык",
-  "short_name": "Французский",
+  "name": "Easy French",
+  "short_name": "Easy French",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
