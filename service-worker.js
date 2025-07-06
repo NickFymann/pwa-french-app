@@ -1,11 +1,15 @@
 const CACHE_NAME = 'french-app-cache-v1';
+const BASE_PATH = '/pwa-french-app';
+
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/manifest.json',
-  '/rules/index.html',
-  '/rules/basic_rules.html'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/style.css`,
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/service-worker.js`,
+  `${BASE_PATH}/rules/index.html`,
+  `${BASE_PATH}/rules/basic_rules.html`,
+  // Можно добавить и другие файлы
 ];
 
 self.addEventListener('install', (event) => {
