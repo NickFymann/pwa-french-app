@@ -1,27 +1,52 @@
-const CACHE_NAME = 'french-app-cache-v1';
-const BASE_PATH = '/pwa-french-app';
+const CACHE_NAME = 'french-app-cache-v2';
 
 const urlsToCache = [
-  `${BASE_PATH}/`,
-  `${BASE_PATH}/index.html`,
-  `${BASE_PATH}/style.css`,
-  `${BASE_PATH}/manifest.json`,
-  `${BASE_PATH}/service-worker.js`,
-  `${BASE_PATH}/rules/index.html`,
-  `${BASE_PATH}/rules/basic_rules.html`,
-  // Можно добавить и другие файлы
+  '/pwa-french-app/',
+  '/pwa-french-app/index.html',
+  '/pwa-french-app/style.css',
+  '/pwa-french-app/manifest.json',
+  '/pwa-french-app/rules/index.html',
+  '/pwa-french-app/rules/basic_rules.html',
+  '/pwa-french-app/icon-192.png',
+  '/pwa-french-app/icon-512.png',
+  // Добавь другие html/css/audio файлы при необходимости
 ];
 
+// Установка service worker и кэширование файлов
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
+    })
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then(
-      (response) => response || fetch(event.request)
+// Активация и удаление старого кеша
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      )
     )
   );
 });
+
+// Обработка запросов: сначала из кеша, иначе — из сети
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      return (
+        cachedResponse ||
+        fetch(event.request).catch(() => {
+          // Можно сюда добавить оффлайн-страницу при необходимости
+        })
+      );
+    })
+  );
+});
+
