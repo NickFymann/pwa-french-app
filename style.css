@@ -1,104 +1,29 @@
 body {
   font-family: system-ui, sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
-  margin: 0;
+  background: #f9f9f9;
+  margin: 0 auto;
+  max-width: 900px;
   padding: 20px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #222;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 1.5em;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #ffffff;
-  border-left: 5px solid #3498db;
-  padding: 16px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-li a {
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-li a:hover {
-  color: #3498db;
-}
-
-.examples-title {
-  margin-top: 1.2em;
-  font-weight: bold;
-  color: #555;
-}
-
-.example {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+.section-link {
+  display: block;
+  margin: 1em 0;
+  padding: 12px;
   background: #fff;
-  padding: 8px 12px;
+  border-left: 4px solid #3498db;
   border-radius: 6px;
-  border: 1px solid #ddd;
-}
-
-.word {
+  text-decoration: none;
+  color: #000;
   font-weight: bold;
-  font-size: 1.05em;
 }
 
-.phonetic {
-  font-style: italic;
-  color: #777;
+.section-link:hover {
+  background: #eef6ff;
 }
 
-.translation {
-  color: #444;
-}
-
-.play {
-  padding: 4px 8px;
-  font-size: 0.9em;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.play:hover {
-  background-color: #2d7fc0;
-}
-
-/* Мобильная адаптация */
-@media (max-width: 600px) {
-  body {
-    padding: 12px;
-  }
-
-  .example {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .play {
-    margin-top: 6px;
-  }
-}
