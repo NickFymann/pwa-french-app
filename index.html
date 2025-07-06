@@ -6,11 +6,42 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#3498db" />
+
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/pwa-french-app/service-worker.js');
     }
   </script>
+
+  <script>
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+
+      // Показываем кнопку "Установить"
+      const installBtn = document.createElement('button');
+      installBtn.textContent = '📲 Установить приложение';
+      installBtn.className = 'install-button';
+      document.body.appendChild(installBtn);
+
+      installBtn.addEventListener('click', () => {
+        installBtn.remove();
+        deferredPrompt.prompt();
+
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Пользователь установил приложение');
+          } else {
+            console.log('Пользователь отменил установку');
+          }
+          deferredPrompt = null;
+        });
+      });
+    });
+  </script>
+
 </head>
 <body>
   <h1>Французский язык</h1>
