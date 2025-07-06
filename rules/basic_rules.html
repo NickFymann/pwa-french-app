@@ -4,30 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Базовые правила чтения</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="rules.css" />
 </head>
 <body>
-  <h1>Базовые правила чтения</h1>
+<h1>Базовые правила чтения</h1>
 
-  <p>Во французском языке ударение падает на последний слог. Это основное правило произношения.</p>
-
-  <h3>Exemples:</h3>
-
-  <div class="example">
-    <strong>chocolat</strong> <em>[ʃɔ.kɔ.la]</em> — шоколад
-    <button onclick="new Audio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_chocolat.mp3').play()">🔊</button>
+<!-- ПРАВИЛО 1 -->
+<div class="rule">
+  <div class="rule-title"><u>Правило №1</u></div>
+  <div class="description">
+	Ударение всегда падает на последний слог.
   </div>
 
-  <div class="example">
-    <strong>passeport</strong> <em>[pas.pɔʁ]</em> — паспорт
-    <button onclick="new Audio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_passeport.mp3').play()">🔊</button>
+  <div class="examples">
+    <div class="examples-title"><u>Exemples</u>:</div>
+
+    <div class="example">
+      <span class="word">сhocolat</span>
+      <span class="phonetic">[ʃɔ.kɔ.la]</span>
+      <span class="translation">— шоколад</span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_chocolat.mp3')">🔊</button>
+    </div>
+
+    <div class="example">
+      <span class="word">passeport</span>
+      <span class="phonetic">[pas.pɔʁ]</span>
+      <span class="translation">— паспорт</span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_passeport.mp3')">🔊</button>
+    </div>
+
+    <div class="example">
+      <span class="word">photographie</span>
+      <span class="phonetic">[fɔ.tɔ.ɡʁa.fi]</span>
+      <span class="translation">— фотография</span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_photographie.mp3')">🔊</button>
+    </div>
+	
+  </div>
+</div>
+
+<div class="rule">
+  <div class="rule-title"><u>Правило №2</u></div>
+  <div class="description">
+    Безударные гласные произносятся чётко и не редуцируются, как, например, в русском: молоко - [малако].
   </div>
 
-  <div class="example">
-    <strong>photographie</strong> <em>[fɔ.tɔ.ɡʁa.fi]</em> — фотография
-    <button onclick="new Audio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_photographie.mp3').play()">🔊</button>
+  <div class="examples">
+    <div class="examples-title"><u>Exemples</u>:</div>
+
+    <div class="example">
+      <span class="word">monument</span>
+      <span class="phonetic">[mɔ.ny.mɑ̃]</span>
+      <span class="translation">— памятник</span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_monument.mp3')">🔊</button>
+    </div>
+
+    <div class="example">
+      <span class="word">prononce</span>
+      <span class="phonetic">[pʁɔ.nɔ̃s]</span>
+      <span class="translation">— (я/он) произношу/произносит</span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_prononce.mp3')">🔊</button>
+    </div>
+
+    <div class="example">
+      <span class="word">professeur</span>
+      <span class="phonetic">[pʁɔ.fɛ.sœʁ]</span>
+      <span class="translation">— профессор</span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_professeur.mp3')">🔊</button>
+    </div>
+  </div>
+</div>
+
+<p><a class="section-link" href="index.html">← Назад к темам</a></p>
+<!--Шаблон правила
+<div class="rule">
+  <div class="rule-title"><u> </u></div>
+  <div class="description">
+    
   </div>
 
-  <p><a class="section-link" href="index.html">← Назад к темам</a></p>
+  <div class="examples">
+    <div class="examples-title"><u>Exemples</u>:</div>
+
+    <div class="example">
+      <span class="word"></span>
+      <span class="phonetic">[]</span>
+      <span class="translation">— </span>
+      <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_.mp3')">🔊</button>
+    </div>
+    
+  </div>
+</div>
+-->
+<script>
+  function playAudio(url) {
+    const audio = new Audio(url);
+    audio.play();
+  }
+</script>
+
 </body>
-</html>
