@@ -5,12 +5,11 @@ body {
   max-width: 900px;
   padding: 20px;
   color: #222;
-  box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 1.5em;
 }
 
@@ -24,8 +23,7 @@ h1 {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  font-size: 1.2em;
-  transition: background 0.2s ease;
+  transition: background 0.2s;
 }
 
 .section-link:hover {
@@ -34,39 +32,17 @@ h1 {
 
 .install-button {
   display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
+  margin: 30px auto;
+  padding: 12px 24px;
   font-size: 16px;
   background-color: #3498db;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .install-button:hover {
   background-color: #2d7fc0;
 }
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 600px) {
-  body {
-    padding: 12px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  .section-link {
-    font-size: 1em;
-    padding: 10px;
-  }
-
-  .install-button {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
-}
-
-
