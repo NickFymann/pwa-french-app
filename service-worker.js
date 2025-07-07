@@ -1,17 +1,22 @@
+// Версия service worker (менять при каждом коммите!)
+const SW_VERSION = '2025-07-07_1759';
+
 self.addEventListener('install', (event) => {
-  // Пропустить ожидание — активироваться сразу
-  self.skipWaiting();
+  self.skipWaiting(); // Активируем сразу
 });
 
 self.addEventListener('activate', (event) => {
-  // Удалить все существующие кэши
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
+    // Удаляем ВСЕ кэши
+    caches.keys().then((keys) =>
+      Promise.all(keys.map((key) => caches.delete(key)))
+    )
   );
-  self.clients.claim();
+  self.clients.claim(); // Захватываем все вкладки
 });
 
 self.addEventListener('fetch', (event) => {
-  // Всегда тянуть с сети
-  event.respondWith(fetch(event.request));
+  event.respondWith(
+    fetch(event.request, { cache: 'no-store' }) // ❗ network only
+  );
 });
