@@ -90,6 +90,17 @@ h1 {
   margin-top: 10px;
 }
 
+.example_boxed {
+  display: inline-block;              /* Сделать по ширине содержимого */
+  max-width: 100%;                   /* Не выходить за границы родителя */
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #b7f7f6;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
 .play {
   padding: 4px 8px;
   font-size: 0.9em;

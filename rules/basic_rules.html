@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Базовые правила чтения</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="rules.css?v=6" />
+  <link rel="stylesheet" href="rules.css?v=7" />
 </head>
 <body>
 <h1>Базовые правила чтения</h1>
@@ -249,7 +249,7 @@
   </div>
 
   <div class="examples">
-    <div class="examples-title"><u><h3>Exemples:</h3></u></div>
+    <div class="examples-title"><u>Exemples</u>:</div>
       
     <div class="example">
       <span class="word">parler</span>
@@ -278,7 +278,7 @@
 
 <div class="rule">
       <div class="rule-title"><u>Règle №7 </u></div>
-      <div class="description">Буква <b><i>l</b></i> всегда читается мягко.</div>
+      <div class="description">Буква <b>l</b> всегда читается мягко.</div>
       
       
           <div class="examples">
@@ -314,13 +314,46 @@
               <span class="translation">— язык</span>
               <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_langue.mp3')"><img src="../images/headphones.png" width = "20" alt="Наушники" /></button>
             </div>
-
-            
           </div>
-
-        
     </div>
 
+<div class="rule">
+    <div class="rule-title"><u>Règle №8 </u></div>
+    <div class="description">Двойные согласные <b>mm, nn, tt</b> и т.д. читаются как один звук.</div>
+    
+    
+        <div class="examples">
+          <div class="examples-title"><u>Exemples</u>:</div>
+            
+          <div class="example">
+            <span class="word">pomme</span>
+            <span class="phonetic">[pɔm]</span>
+            <span class="translation">— яблоко</span>
+            <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_pomme.mp3')">🎧</button>
+          </div>
+
+          
+          <div class="example">
+            <span class="word">personne</span>
+            <span class="phonetic">[pɛʁ.sɔn]</span>
+            <span class="translation">— человек</span>
+            <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_personne.mp3')">🎧</button>
+          </div>
+
+          
+          <div class="example">
+            <span class="word">carotte</span>
+            <span class="phonetic">[ka.ʁɔt]</span>
+            <span class="translation">— морковь</span>
+            <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_carotte.mp3')">🎧</button>
+          </div>
+        </div>
+</div>
+<div class="rule">
+  <div class="rule-title"><u>Règle №9 </u></div>
+    <div class="description">Буква <b>h</b> может вести себя по-разному в зависимости от своего типа: <b>"немая" (muet)</b> или <b>"дышащая" (aspiré)</b>. <br><br>Немая <b>h</b> не читается, но позволяет <b>элезию (élision)</b> - отпадение конечного гласного звука в слове, когда следующее слово начинается с гласного (например, <b>l'esprit</b> вместо <b>le esprit</b>), и <b>связывание (liaison)</b> - фонетическое      явление, при котором непроизносимый согласный звук на конце слова становится произносимым и связывается с гласным звуком следующего      слова <br><div class="example_boxed"><b>les amis</b> <span class="phonetic">[lezami]</span> - <span class="translation">друзья</span> <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_les_amis.mp3')"><img src="../images/headphones.png" width = "20" alt="Наушники" /></button></div> <br>   <div class="example_boxed"><b>ils adorent</b> <span class="phonetic">[ilzadɔʁ]</span> - <span class="translation">они обожают</span> <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_ils_adorent.mp3')"><img src="../images/headphones.png" width = "20" alt="Наушники" /></button></div> <br> Дышащая <b>h</b> тоже не читается, но препятствует элезии и связыванию, то есть перед ней не ставится апостроф: <br> <div class="example_boxed"> <b>le héros</b> <span class="phonetic">[lə eʁo]</span> — <span class="translation">герой</span> <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_le_heros.mp3')"><img src="../images/headphones.png" width = "20" alt="Наушники" /></button></div> - нет элезии <b>l’héros</b> <br>  и не появляется связь: <br> <div class="example_boxed"><b>les héros</b> <span class="phonetic">[le eʁo]</span> — <span class="translation">герои</span> <button class="play" onclick="playAudio('https://github.com/NickFymann/francais/raw/main/audio/pronunciation_fr_les_heros.mp3')"><img src="../images/headphones.png" width = "20" alt="Наушники" /></button></div> вместо <span class="phonetic">[lezeʁo]</span>.     <br> К сожалению, во французском нет визуального различия между <b>h muet</b> и <b>h aspiré</b> — нужно запоминать или смотреть произношение в словаре.     </div>
+    
+</div>   
 
 <p><a class="section-link" href="index.html">← Назад к темам</a></p>
 <!--Шаблон правила
@@ -349,8 +382,6 @@
   </div>
 </div>
 -->
-
-
 <script>
   function playAudio(url) {
     const audio = new Audio(url);
