@@ -2,6 +2,7 @@
   "name": "Easy French",
   "short_name": "Easy French",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3498db",
@@ -18,3 +19,4 @@
     }
   ]
 }
+
