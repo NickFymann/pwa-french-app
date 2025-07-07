@@ -1,5 +1,5 @@
 // Версия service worker (менять при каждом коммите!)
-const SW_VERSION = '2025-07-07_1759';
+const SW_VERSION = '2025-07-07_1830';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting(); // Активируем сразу
