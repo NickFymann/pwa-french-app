@@ -81,6 +81,15 @@ h1 {
   color: #444;
 }
 
+.examples,
+.exceptions {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #b7f7f6;
+  margin-top: 10px;
+}
+
 .play {
   padding: 4px 8px;
   font-size: 0.9em;
